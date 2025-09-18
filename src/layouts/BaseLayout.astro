@@ -1,0 +1,24 @@
+---
+import Header from '../components/Header.jsx';
+import Footer from '../components/Footer.astro';
+
+import '../styles/global.css';
+
+---
+
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Plataforma Mascotas Perdidas</title>
+   </head>
+  <body class="font-sans  ">
+    <!-- <MetaPixel /> -->
+    <Header   client:load/>
+    <main class="max-w-7xl mx-auto p-4">
+      <slot />
+    </main>
+    <Footer />
+  </body>
+</html>
+

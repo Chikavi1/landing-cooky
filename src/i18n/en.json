@@ -1,0 +1,13 @@
+{
+  "navbar": {
+    "home": "Home",
+    "foundPets": "Found Pets",
+    "success": "Success Story",
+    "petCare": "Pet Care",
+    "about": "About"
+  },
+  "buttons": {
+    "login": "Login",
+    "findPets": "Find pets →"
+  }
+}

@@ -1,0 +1,11 @@
+---
+const { mascota } = Astro.props;
+---
+
+<div class="border rounded-md p-4 shadow-md mb-4">
+  <img src={mascota.imagen} alt={mascota.nombre} class="w-full h-48 object-cover rounded" />
+  <h2 class="font-bold text-lg mt-2">{mascota.nombre}</h2>
+  <p><strong>Ubicación:</strong> {mascota.ubicacion}</p>
+  <p><strong>Fecha:</strong> {mascota.fecha}</p>
+  <p>{mascota.descripcion}</p>
+</div>

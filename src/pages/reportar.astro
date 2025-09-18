@@ -1,0 +1,15 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+
+<BaseLayout>
+  <h2 class="text-2xl font-bold mb-4">Reportar mascota perdida</h2>
+  <form class="flex flex-col gap-3">
+    <input type="text" placeholder="Nombre de la mascota" class="border p-2 rounded" />
+    <input type="text" placeholder="Ubicación" class="border p-2 rounded" />
+    <input type="date" class="border p-2 rounded" />
+    <textarea placeholder="Descripción" class="border p-2 rounded"></textarea>
+    <input type="file" class="border p-2 rounded" />
+    <button type="submit" class="bg-blue-600 text-white p-2 rounded mt-2">Reportar</button>
+  </form>
+</BaseLayout>

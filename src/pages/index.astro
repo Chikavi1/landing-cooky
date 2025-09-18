@@ -1,11 +1,346 @@
 ---
-import Welcome from '../components/Welcome.astro';
-import Layout from '../layouts/Layout.astro';
+import BaseLayout from '../layouts/BaseLayout.astro';
+import ReportCard from '../components/ReportCard.astro';
 
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
+const reportes = [
+  { nombre: 'Firulais', ubicacion: 'CDMX', fecha: '2025-09-15', descripcion: 'Perdido cerca del parque', imagen: '/img/firulais.jpg' },
+  { nombre: 'Michi', ubicacion: 'Guadalajara', fecha: '2025-09-16', descripcion: 'Gato gris perdido', imagen: '/img/michi.jpg' }
+];
 ---
 
-<Layout>
-	<Welcome />
-</Layout>
+<BaseLayout>
+  <!-- <h2 class="text-2xl font-bold mb-4">Reportes recientes</h2>
+  {reportes.map(m => <ReportCard mascota={m} />)} -->
+
+  <div class="antialiased text-gray-800">
+      
+      <!-- Header -->
+      
+  
+      <!-- Hero Section -->
+      <section class="hero-gradient py-16 lg:py-24">
+          <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+              <div class="grid lg:grid-cols-2 gap-12 items-center">
+                  <!-- Left Content -->
+                  <div class="animate-fade-in">
+                      <div class="inline-flex items-center bg-pet-blue-100 text-pet-blue-800 px-4 py-2 rounded-full text-sm font-medium mb-6">
+                          <span class="animate-bounce-slow mr-2">🎉</span>
+                          Reunited at Last
+                      </div>
+                      
+                      <h1 class="text-4xl lg:text-6xl font-bold text-gray-900 mb-6 leading-tight">
+                          Find Your Lost<br>
+                          <span class="text-pet-blue-600 underline decoration-pet-orange-400 decoration-4 underline-offset-4">Pet Today!</span>
+                      </h1>
+                      
+                      <p class="text-lg text-gray-600 mb-8 leading-relaxed max-w-md">
+                          We help you reunite with your beloved pet by help to find and get back so no worries than your search or report lost pet now!
+                      </p>
+  
+                      <!-- Stats -->
+                      <div class="flex items-center space-x-8 mb-8">
+                          <div class="text-center">
+                              <div class="text-2xl font-bold text-pet-blue-600">3K+</div>
+                              <div class="text-sm text-gray-500">Pets Found</div>
+                          </div>
+                          <div class="text-center">
+                              <div class="text-2xl font-bold text-pet-blue-600">10K</div>
+                              <div class="text-sm text-gray-500">User Active</div>
+                          </div>
+                          <div class="text-center">
+                              <div class="text-2xl font-bold text-pet-blue-600">Like</div>
+                              <div class="text-sm text-gray-500">Pet Reunions</div>
+                          </div>
+                      </div>
+  
+                      <!-- Form Section -->
+                      <div class="bg-white rounded-2xl shadow-xl p-6 max-w-lg">
+                          <div class="grid grid-cols-2 gap-4 mb-4">
+                              <div>
+                                  <div class="flex items-center space-x-2 text-pet-blue-600 mb-2">
+                                      <span>🐕</span>
+                                      <span class="font-medium">Pets</span>
+                                  </div>
+                                  <select class="w-full border border-gray-200 rounded-lg px-3 py-2 focus:ring-2 focus:ring-pet-blue-500 focus:border-transparent">
+                                      <option>Type of pet</option>
+                                      <option>Dog</option>
+                                      <option>Cat</option>
+                                      <option>Bird</option>
+                                      <option>Other</option>
+                                  </select>
+                              </div>
+                              
+                              <div>
+                                  <div class="flex items-center space-x-2 text-pet-blue-600 mb-2">
+                                      <span>📍</span>
+                                      <span class="font-medium">Location</span>
+                                  </div>
+                                  <input type="text" placeholder="Your location" class="w-full border border-gray-200 rounded-lg px-3 py-2 focus:ring-2 focus:ring-pet-blue-500 focus:border-transparent">
+                              </div>
+                          </div>
+                          
+                          <div class="grid grid-cols-2 gap-4 mb-6">
+                              <div>
+                                  <div class="flex items-center space-x-2 text-pet-blue-600 mb-2">
+                                      <span>👤</span>
+                                      <span class="font-medium">Name</span>
+                                  </div>
+                                  <input type="text" placeholder="Pet's name" class="w-full border border-gray-200 rounded-lg px-3 py-2 focus:ring-2 focus:ring-pet-blue-500 focus:border-transparent">
+                              </div>
+                              
+                              <div>
+                                  <div class="flex items-center space-x-2 text-pet-blue-600 mb-2">
+                                      <span>📅</span>
+                                      <span class="font-medium">Days</span>
+                                  </div>
+                                  <input type="number" placeholder="Last of days" class="w-full border border-gray-200 rounded-lg px-3 py-2 focus:ring-2 focus:ring-pet-blue-500 focus:border-transparent">
+                              </div>
+                          </div>
+                          
+                          <button class="w-full bg-pet-blue-500  text-blue-800 font-semibold py-3 rounded-lg transition-all duration-200 shadow-lg hover:shadow-xl transform hover:-translate-y-0.5">
+                             Reporta ya!
+                          </button>
+                      </div>
+                  </div>
+  
+                  <!-- Right Content - Pet Images -->
+                  <div class="relative animate-slide-up">
+                      <div class="relative">
+                          <!-- Main pet image placeholder -->
+                          <div class="w-96 h-96 bg-gradient-to-br from-orange-200 to-yellow-100 rounded-3xl flex items-center justify-center shadow-2xl mx-auto">
+                              <div class="text-6xl">🐕</div>
+                          </div>
+                          
+                          <!-- Floating pet cards -->
+                          <div class="absolute -top-4 -right-4 bg-white rounded-2xl shadow-xl p-4 animate-bounce-slow">
+                              <div class="text-3xl mb-2">🐱</div>
+                              <div class="text-sm font-medium text-gray-700">Luna</div>
+                              <div class="text-xs text-gray-500">Found!</div>
+                          </div>
+                          
+                          <div class="absolute -bottom-6 -left-6 bg-white rounded-2xl shadow-xl p-4 animate-bounce-slow" style="animation-delay: 1s;">
+                              <div class="text-3xl mb-2">🐕</div>
+                              <div class="text-sm font-medium text-gray-700">Max</div>
+                              <div class="text-xs text-gray-500">Reunited!</div>
+                          </div>
+                      </div>
+                      
+                      <!-- Help Now Card -->
+                      <div class="absolute top-8 right-0 bg-pet-blue-500 text-white rounded-2xl p-4 shadow-xl max-w-xs transform rotate-3 hover:rotate-0 transition-transform duration-300">
+                          <div class="text-sm font-medium mb-2">Where Pet Love Comes Alive</div>
+                          <div class="text-xs opacity-90 leading-relaxed">
+                              Don't let your beloved pet stay lost our beloved pet or take a board call that beloved forever to back.
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </section>
+  
+      <!-- Where Pet Love Comes Alive Section -->
+      <section class="py-16 bg-white">
+          <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+              <div class="grid lg:grid-cols-2 gap-12 items-center">
+                  <div>
+                      <h2 class="text-3xl lg:text-4xl font-bold text-gray-900 mb-6">
+                          Where Pet Love Comes Alive
+                      </h2>
+                      <p class="text-lg text-gray-600 mb-8 leading-relaxed">
+                          A place for pet lost so we hope we can help they back to found pet get back so to come.
+                      </p>
+                      <a href="#" class="inline-flex items-center text-pet-blue-600 font-semibold hover:text-pet-blue-700 transition-colors">
+                          See More →
+                      </a>
+                  </div>
+                  
+                  <div class="grid grid-cols-2 gap-4">
+                      <div class="space-y-4">
+                          <div class="bg-gradient-to-br from-orange-200 to-yellow-100 rounded-2xl h-32 flex items-center justify-center text-4xl">🐕</div>
+                          <div class="bg-gradient-to-br from-blue-200 to-cyan-100 rounded-2xl h-24 flex items-center justify-center text-3xl">🐱</div>
+                      </div>
+                      <div class="space-y-4 mt-8">
+                          <div class="bg-gradient-to-br from-pink-200 to-purple-100 rounded-2xl h-24 flex items-center justify-center text-3xl">🐰</div>
+                          <div class="bg-gradient-to-br from-green-200 to-emerald-100 rounded-2xl h-32 flex items-center justify-center text-4xl">🐦</div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </section>
+  
+      <!-- Dedicated Section -->
+      <section class="py-16 gradient-bg">
+          <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+              <div class="grid lg:grid-cols-2 gap-12 items-center">
+                  <div class="space-y-6">
+                      <h2 class="text-3xl lg:text-4xl font-bold text-gray-900">
+                          Dedicated to Reuniting Lost Pets with Their Families
+                      </h2>
+                      <p class="text-lg text-gray-600 leading-relaxed">
+                          Pets Finder was founded with a single mission to mind, to help lost pets find their way back home. Our team is passionate about animal welfare.
+                      </p>
+                      
+                      <!-- Pet cards on the right side -->
+                      <div class="flex flex-col space-y-4">
+                          <div class="flex items-center space-x-3 bg-white rounded-lg p-3 shadow-sm">
+                              <div class="w-12 h-12 bg-orange-200 rounded-lg flex items-center justify-center text-xl">🐕</div>
+                              <div class="text-sm font-medium text-gray-700">Happy reunions daily</div>
+                          </div>
+                          <div class="flex items-center space-x-3 bg-white rounded-lg p-3 shadow-sm">
+                              <div class="w-12 h-12 bg-blue-200 rounded-lg flex items-center justify-center text-xl">🐱</div>
+                              <div class="text-sm font-medium text-gray-700">24/7 support team</div>
+                          </div>
+                          <div class="flex items-center space-x-3 bg-white rounded-lg p-3 shadow-sm">
+                              <div class="w-12 h-12 bg-pink-200 rounded-lg flex items-center justify-center text-xl">🏠</div>
+                              <div class="text-sm font-medium text-gray-700">Safe return guarantee</div>
+                          </div>
+                      </div>
+                  </div>
+                  
+                  <!-- Image placeholder -->
+                  <div class="relative">
+                      <div class="w-full h-96 bg-gradient-to-br from-red-200 via-pink-200 to-purple-200 rounded-3xl flex items-center justify-center shadow-2xl">
+                          <div class="text-8xl">🐕‍🦺</div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </section>
+  
+      <!-- Community Section -->
+      <section class="py-16 bg-white">
+          <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+              <div class="grid lg:grid-cols-2 gap-12 items-center">
+                  <div>
+                      <h2 class="text-3xl lg:text-4xl font-bold text-gray-900 mb-6">
+                          Lost or Found a Pet? Let Our Community Know
+                      </h2>
+                      <p class="text-lg text-gray-600 mb-8 leading-relaxed">
+                          Looking for care for a stressful experience, but reporting a stray can make all the difference. Use our database from everyone to look for the pets, providing essential information such as breed, color, size, and your area location.
+                      </p>
+                      
+                      <!-- Partner logos -->
+                      <div class="flex items-center space-x-6 opacity-60">
+                          <div class="text-2xl font-bold text-gray-400">Google</div>
+                          <div class="text-2xl font-bold text-orange-400">zapier</div>
+                          <div class="text-2xl font-bold text-orange-500">🏢 Airtable</div>
+                          <div class="text-2xl font-bold text-orange-600">HubSpot</div>
+                      </div>
+                  </div>
+                  
+                  <div class="relative">
+                      <!-- Map placeholder -->
+                      <div class="bg-gray-200 rounded-2xl h-80 relative overflow-hidden shadow-xl">
+                          <div class="absolute inset-0 bg-gradient-to-br from-green-100 to-blue-100 opacity-50"></div>
+                          
+                          <!-- Location pin -->
+                          <div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
+                              <div class="bg-pet-blue-500 text-white p-3 rounded-full shadow-lg">
+                                  <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                                      <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
+                                  </svg>
+                              </div>
+                          </div>
+                          
+                          <!-- Location info card -->
+                          <div class="absolute bottom-4 left-4 bg-white rounded-lg p-3 shadow-lg">
+                              <div class="text-sm font-semibold text-gray-900">Jakarta</div>
+                              <div class="text-xs text-gray-500">Jl. Pemuda, Rawamangun 54105</div>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </section>
+  
+      <!-- Success Stories Section -->
+      <section class="py-16 gradient-bg">
+          <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+              <div class="grid lg:grid-cols-2 gap-12 items-center">
+                  <!-- Pet illustration -->
+                  <div class="relative">
+                      <div class="w-96 h-80 bg-gradient-to-br from-orange-200 to-yellow-100 rounded-3xl flex items-center justify-center shadow-2xl mx-auto">
+                          <div class="text-8xl">🐕🐱</div>
+                      </div>
+                  </div>
+                  
+                  <div>
+                      <h2 class="text-3xl lg:text-4xl font-bold text-gray-900 mb-6">
+                          Success Stories:<br>
+                          <span class="text-pet-blue-600">Reunited at Last</span>
+                      </h2>
+                      
+                      <p class="text-lg text-gray-600 mb-8 leading-relaxed">
+                          Read heartwarming stories of pets who have been successfully reunited with their pets or helped who to found pets to their owners.
+                      </p>
+                      
+                      <!-- Questions -->
+                      <div class="space-y-4 mb-8">
+                          <div class="flex items-center justify-between bg-white rounded-lg p-4 shadow-sm">
+                              <span class="text-gray-700 font-medium">What kind of pet are you looking for?</span>
+                              <svg class="w-5 h-5 text-pet-blue-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                              </svg>
+                          </div>
+                          <div class="flex items-center justify-between bg-white rounded-lg p-4 shadow-sm">
+                              <span class="text-gray-700 font-medium">What kind of pet are you rehoming?</span>
+                              <svg class="w-5 h-5 text-pet-blue-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                              </svg>
+                          </div>
+                      </div>
+                      
+                      <a href="#" class="inline-flex items-center text-green-800 font-semibold   transition-colors">
+                          Help Now →
+                      </a>
+                  </div>
+              </div>
+          </div>
+      </section>
+  
+      <!-- Footer -->
+     
+  
+      <script>
+          // Mobile menu toggle
+          const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+          const mobileMenu = document.getElementById('mobile-menu');
+          
+          if (mobileMenuBtn && mobileMenu) {
+              mobileMenuBtn.addEventListener('click', () => {
+                  mobileMenu.classList.toggle('hidden');
+              });
+          }
+  
+          // Smooth scroll for anchor links
+          document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+              anchor.addEventListener('click', function (e) {
+                  e.preventDefault();
+                   
+              });
+          });
+  
+          // Add scroll animations
+          const observerOptions = {
+              threshold: 0.1,
+              rootMargin: '0px 0px -50px 0px'
+          };
+  
+          const observer = new IntersectionObserver((entries) => {
+              entries.forEach(entry => {
+                  if (entry.isIntersecting) {
+                      entry.target.classList.add('animate-fade-in');
+                  }
+              });
+          }, observerOptions);
+  
+          // Observe all sections for animation
+          document.querySelectorAll('section').forEach(section => {
+              observer.observe(section);
+          });
+      </script>
+  </div>
+
+
+</BaseLayout>
+
+

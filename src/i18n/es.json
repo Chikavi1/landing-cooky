@@ -1,0 +1,13 @@
+{
+  "navbar": {
+    "home": "Inicio",
+    "foundPets": "Mascotas encontradas",
+    "success": "Historias de éxito",
+    "petCare": "Cuidado de mascotas",
+    "about": "Acerca de"
+  },
+  "buttons": {
+    "login": "Iniciar sesión",
+    "findPets": "Encontrar mascotas →"
+  }
+}
