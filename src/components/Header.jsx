@@ -1,25 +1,18 @@
-import { useState, useEffect } from 'react';
+ 
+import { useLanguage } from '../context/LanguageContext.jsx';
 import LanguageSwitcher from './LanguageSwitcher.jsx';
-import es from '../i18n/es.json';
-import en from '../i18n/en.json';
 
 export default function Header() {
-  const [lang, setLang] = useState('es');
-  const [t, setT] = useState(es);
-
-  useEffect(() => {
-    const saved = localStorage.getItem('lang') || 'es';
-    setLang(saved);
-    setT(saved === 'en' ? en : es);
-  }, []);
-
-  function handleLangChange(selectedLang) {
-    setLang(selectedLang);
-    setT(selectedLang === 'en' ? en : es);
-    localStorage.setItem('lang', selectedLang);
-  }
+  const { t } = useLanguage();  
 
   return (
+    <>
+    <header class="bg-yellow-600 text-white py-2 text-center text-sm font-medium animate-pulse-fast">
+        <div class="max-w-7xl mx-auto px-4">
+            🚨 <strong>ALERTA:</strong> Cada minuto cuenta cuando tu mascota está perdida - <span class="underline">Actúa AHORA</span>
+        </div>
+    </header>
+
     <header className="bg-white shadow-sm sticky top-0 z-50">
       <div className="  px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
@@ -29,20 +22,20 @@ export default function Header() {
               <span className="text-white text-lg font-bold">🐾</span>
             </div>
             <div>
-              <div className="font-bold text-xl text-gray-900">mypets.id</div>
+              <div className="font-bold text-xl text-gray-900">Cooky</div>
               <div className="text-xs text-gray-500">Find your pet</div>
             </div>
           </div>
 
           {/* Navigation */}
           <nav className="hidden md:flex items-center space-x-8">
-            <a href="#home" className="text-gray-700 hover:text-pet-blue-600 font-medium transition-colors">{t.navbar.home}</a>
-            <a href="#found-pets" className="text-gray-700 hover:text-pet-blue-600 font-medium transition-colors">{t.navbar.foundPets}</a>
-            <a href="#success" className="text-gray-700 hover:text-pet-blue-600 font-medium transition-colors">{t.navbar.success}</a>
-            <a href="#pet-care" className="text-gray-700 hover:text-pet-blue-600 font-medium transition-colors">{t.navbar.petCare}</a>
-            <a href="#about" className="text-gray-700 hover:text-pet-blue-600 font-medium transition-colors">{t.navbar.about}</a>
-            <button className="text-pet-blue-600 font-semibold hover:text-pet-blue-700 transition-colors">{t.buttons.login}</button>
-            <button className="bg-pet-blue-500   text-green-800 px-6 py-2 rounded-lg font-semibold transition-all duration-200 shadow-lg hover:shadow-xl transform hover:-translate-y-0.5">{t.buttons.findPets}</button>
+            <a href="#home" className="text-gray-700 hover:text-pet-blue-600 font-medium transition-colors">Cómo funciona</a>
+            {/* <a href="#about" className="text-gray-700 hover:text-pet-blue-600 font-medium transition-colors">{t.navbar.about}</a> */}
+            {/* <a href="#found-pets" className="text-gray-700 hover:text-pet-blue-600 font-medium transition-colors">{t.navbar.foundPets}</a> */}
+            <a href="#pet-care" className="text-gray-700 hover:text-pet-blue-600 font-medium transition-colors">{t.navbar.pricing}</a>
+            <a href="#success" className="text-gray-700 hover:text-pet-blue-600 font-medium transition-colors">{t.navbar.faq}</a>
+
+            {/* <button className="text-pet-blue-600 font-semibold hover:text-pet-blue-700 transition-colors">{t.buttons.login}</button> */}
           </nav>
 
           {/* Mobile menu button */}
@@ -52,9 +45,15 @@ export default function Header() {
             </svg>
           </button>
 
-          <LanguageSwitcher onChange={handleLangChange} initialLang={lang} />
+          <LanguageSwitcher />
+          <button class="bg-red-900 text-white px-6 py-2 rounded-full font-semibold hover:bg-red-700 transform hover:scale-105 transition-all duration-200 animate-pulse">
+                        ¡RESCATAR AHORA!
+                    </button>
+
         </div>
       </div>
     </header>
-  );
+    </>
+
+        );
 }

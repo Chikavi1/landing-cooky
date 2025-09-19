@@ -13,291 +13,354 @@ const reportes = [
   {reportes.map(m => <ReportCard mascota={m} />)} -->
 
   <div class="antialiased text-gray-800">
-      
-      <!-- Header -->
-      
+    
+
   
-      <!-- Hero Section -->
-      <section class="hero-gradient py-16 lg:py-24">
-          <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-              <div class="grid lg:grid-cols-2 gap-12 items-center">
-                  <!-- Left Content -->
-                  <div class="animate-fade-in">
-                      <div class="inline-flex items-center bg-pet-blue-100 text-pet-blue-800 px-4 py-2 rounded-full text-sm font-medium mb-6">
-                          <span class="animate-bounce-slow mr-2">🎉</span>
-                          Reunited at Last
-                      </div>
-                      
-                      <h1 class="text-4xl lg:text-6xl font-bold text-gray-900 mb-6 leading-tight">
-                          Find Your Lost<br>
-                          <span class="text-pet-blue-600 underline decoration-pet-orange-400 decoration-4 underline-offset-4">Pet Today!</span>
-                      </h1>
-                      
-                      <p class="text-lg text-gray-600 mb-8 leading-relaxed max-w-md">
-                          We help you reunite with your beloved pet by help to find and get back so no worries than your search or report lost pet now!
-                      </p>
-  
-                      <!-- Stats -->
-                      <div class="flex items-center space-x-8 mb-8">
-                          <div class="text-center">
-                              <div class="text-2xl font-bold text-pet-blue-600">3K+</div>
-                              <div class="text-sm text-gray-500">Pets Found</div>
-                          </div>
-                          <div class="text-center">
-                              <div class="text-2xl font-bold text-pet-blue-600">10K</div>
-                              <div class="text-sm text-gray-500">User Active</div>
-                          </div>
-                          <div class="text-center">
-                              <div class="text-2xl font-bold text-pet-blue-600">Like</div>
-                              <div class="text-sm text-gray-500">Pet Reunions</div>
-                          </div>
-                      </div>
-  
-                      <!-- Form Section -->
-                      <div class="bg-white rounded-2xl shadow-xl p-6 max-w-lg">
-                          <div class="grid grid-cols-2 gap-4 mb-4">
-                              <div>
-                                  <div class="flex items-center space-x-2 text-pet-blue-600 mb-2">
-                                      <span>🐕</span>
-                                      <span class="font-medium">Pets</span>
-                                  </div>
-                                  <select class="w-full border border-gray-200 rounded-lg px-3 py-2 focus:ring-2 focus:ring-pet-blue-500 focus:border-transparent">
-                                      <option>Type of pet</option>
-                                      <option>Dog</option>
-                                      <option>Cat</option>
-                                      <option>Bird</option>
-                                      <option>Other</option>
-                                  </select>
-                              </div>
-                              
-                              <div>
-                                  <div class="flex items-center space-x-2 text-pet-blue-600 mb-2">
-                                      <span>📍</span>
-                                      <span class="font-medium">Location</span>
-                                  </div>
-                                  <input type="text" placeholder="Your location" class="w-full border border-gray-200 rounded-lg px-3 py-2 focus:ring-2 focus:ring-pet-blue-500 focus:border-transparent">
-                              </div>
-                          </div>
-                          
-                          <div class="grid grid-cols-2 gap-4 mb-6">
-                              <div>
-                                  <div class="flex items-center space-x-2 text-pet-blue-600 mb-2">
-                                      <span>👤</span>
-                                      <span class="font-medium">Name</span>
-                                  </div>
-                                  <input type="text" placeholder="Pet's name" class="w-full border border-gray-200 rounded-lg px-3 py-2 focus:ring-2 focus:ring-pet-blue-500 focus:border-transparent">
-                              </div>
-                              
-                              <div>
-                                  <div class="flex items-center space-x-2 text-pet-blue-600 mb-2">
-                                      <span>📅</span>
-                                      <span class="font-medium">Days</span>
-                                  </div>
-                                  <input type="number" placeholder="Last of days" class="w-full border border-gray-200 rounded-lg px-3 py-2 focus:ring-2 focus:ring-pet-blue-500 focus:border-transparent">
-                              </div>
-                          </div>
-                          
-                          <button class="w-full bg-pet-blue-500  text-blue-800 font-semibold py-3 rounded-lg transition-all duration-200 shadow-lg hover:shadow-xl transform hover:-translate-y-0.5">
-                             Reporta ya!
-                          </button>
-                      </div>
-                  </div>
-  
-                  <!-- Right Content - Pet Images -->
-                  <div class="relative animate-slide-up">
-                      <div class="relative">
-                          <!-- Main pet image placeholder -->
-                          <div class="w-96 h-96 bg-gradient-to-br from-orange-200 to-yellow-100 rounded-3xl flex items-center justify-center shadow-2xl mx-auto">
-                              <div class="text-6xl">🐕</div>
-                          </div>
-                          
-                          <!-- Floating pet cards -->
-                          <div class="absolute -top-4 -right-4 bg-white rounded-2xl shadow-xl p-4 animate-bounce-slow">
-                              <div class="text-3xl mb-2">🐱</div>
-                              <div class="text-sm font-medium text-gray-700">Luna</div>
-                              <div class="text-xs text-gray-500">Found!</div>
-                          </div>
-                          
-                          <div class="absolute -bottom-6 -left-6 bg-white rounded-2xl shadow-xl p-4 animate-bounce-slow" style="animation-delay: 1s;">
-                              <div class="text-3xl mb-2">🐕</div>
-                              <div class="text-sm font-medium text-gray-700">Max</div>
-                              <div class="text-xs text-gray-500">Reunited!</div>
-                          </div>
-                      </div>
-                      
-                      <!-- Help Now Card -->
-                      <div class="absolute top-8 right-0 bg-pet-blue-500 text-white rounded-2xl p-4 shadow-xl max-w-xs transform rotate-3 hover:rotate-0 transition-transform duration-300">
-                          <div class="text-sm font-medium mb-2">Where Pet Love Comes Alive</div>
-                          <div class="text-xs opacity-90 leading-relaxed">
-                              Don't let your beloved pet stay lost our beloved pet or take a board call that beloved forever to back.
-                          </div>
-                      </div>
-                  </div>
-              </div>
-          </div>
-      </section>
-  
-      <!-- Where Pet Love Comes Alive Section -->
-      <section class="py-16 bg-white">
-          <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-              <div class="grid lg:grid-cols-2 gap-12 items-center">
-                  <div>
-                      <h2 class="text-3xl lg:text-4xl font-bold text-gray-900 mb-6">
-                          Where Pet Love Comes Alive
-                      </h2>
-                      <p class="text-lg text-gray-600 mb-8 leading-relaxed">
-                          A place for pet lost so we hope we can help they back to found pet get back so to come.
-                      </p>
-                      <a href="#" class="inline-flex items-center text-pet-blue-600 font-semibold hover:text-pet-blue-700 transition-colors">
-                          See More →
-                      </a>
-                  </div>
-                  
-                  <div class="grid grid-cols-2 gap-4">
-                      <div class="space-y-4">
-                          <div class="bg-gradient-to-br from-orange-200 to-yellow-100 rounded-2xl h-32 flex items-center justify-center text-4xl">🐕</div>
-                          <div class="bg-gradient-to-br from-blue-200 to-cyan-100 rounded-2xl h-24 flex items-center justify-center text-3xl">🐱</div>
-                      </div>
-                      <div class="space-y-4 mt-8">
-                          <div class="bg-gradient-to-br from-pink-200 to-purple-100 rounded-2xl h-24 flex items-center justify-center text-3xl">🐰</div>
-                          <div class="bg-gradient-to-br from-green-200 to-emerald-100 rounded-2xl h-32 flex items-center justify-center text-4xl">🐦</div>
-                      </div>
-                  </div>
-              </div>
-          </div>
-      </section>
-  
-      <!-- Dedicated Section -->
-      <section class="py-16 gradient-bg">
-          <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-              <div class="grid lg:grid-cols-2 gap-12 items-center">
-                  <div class="space-y-6">
-                      <h2 class="text-3xl lg:text-4xl font-bold text-gray-900">
-                          Dedicated to Reuniting Lost Pets with Their Families
-                      </h2>
-                      <p class="text-lg text-gray-600 leading-relaxed">
-                          Pets Finder was founded with a single mission to mind, to help lost pets find their way back home. Our team is passionate about animal welfare.
-                      </p>
-                      
-                      <!-- Pet cards on the right side -->
-                      <div class="flex flex-col space-y-4">
-                          <div class="flex items-center space-x-3 bg-white rounded-lg p-3 shadow-sm">
-                              <div class="w-12 h-12 bg-orange-200 rounded-lg flex items-center justify-center text-xl">🐕</div>
-                              <div class="text-sm font-medium text-gray-700">Happy reunions daily</div>
-                          </div>
-                          <div class="flex items-center space-x-3 bg-white rounded-lg p-3 shadow-sm">
-                              <div class="w-12 h-12 bg-blue-200 rounded-lg flex items-center justify-center text-xl">🐱</div>
-                              <div class="text-sm font-medium text-gray-700">24/7 support team</div>
-                          </div>
-                          <div class="flex items-center space-x-3 bg-white rounded-lg p-3 shadow-sm">
-                              <div class="w-12 h-12 bg-pink-200 rounded-lg flex items-center justify-center text-xl">🏠</div>
-                              <div class="text-sm font-medium text-gray-700">Safe return guarantee</div>
-                          </div>
-                      </div>
-                  </div>
-                  
-                  <!-- Image placeholder -->
-                  <div class="relative">
-                      <div class="w-full h-96 bg-gradient-to-br from-red-200 via-pink-200 to-purple-200 rounded-3xl flex items-center justify-center shadow-2xl">
-                          <div class="text-8xl">🐕‍🦺</div>
-                      </div>
-                  </div>
-              </div>
-          </div>
-      </section>
-  
-      <!-- Community Section -->
-      <section class="py-16 bg-white">
-          <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-              <div class="grid lg:grid-cols-2 gap-12 items-center">
-                  <div>
-                      <h2 class="text-3xl lg:text-4xl font-bold text-gray-900 mb-6">
-                          Lost or Found a Pet? Let Our Community Know
-                      </h2>
-                      <p class="text-lg text-gray-600 mb-8 leading-relaxed">
-                          Looking for care for a stressful experience, but reporting a stray can make all the difference. Use our database from everyone to look for the pets, providing essential information such as breed, color, size, and your area location.
-                      </p>
-                      
-                      <!-- Partner logos -->
-                      <div class="flex items-center space-x-6 opacity-60">
-                          <div class="text-2xl font-bold text-gray-400">Google</div>
-                          <div class="text-2xl font-bold text-orange-400">zapier</div>
-                          <div class="text-2xl font-bold text-orange-500">🏢 Airtable</div>
-                          <div class="text-2xl font-bold text-orange-600">HubSpot</div>
-                      </div>
-                  </div>
-                  
-                  <div class="relative">
-                      <!-- Map placeholder -->
-                      <div class="bg-gray-200 rounded-2xl h-80 relative overflow-hidden shadow-xl">
-                          <div class="absolute inset-0 bg-gradient-to-br from-green-100 to-blue-100 opacity-50"></div>
-                          
-                          <!-- Location pin -->
-                          <div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
-                              <div class="bg-pet-blue-500 text-white p-3 rounded-full shadow-lg">
-                                  <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
-                                      <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
-                                  </svg>
-                              </div>
-                          </div>
-                          
-                          <!-- Location info card -->
-                          <div class="absolute bottom-4 left-4 bg-white rounded-lg p-3 shadow-lg">
-                              <div class="text-sm font-semibold text-gray-900">Jakarta</div>
-                              <div class="text-xs text-gray-500">Jl. Pemuda, Rawamangun 54105</div>
-                          </div>
-                      </div>
-                  </div>
-              </div>
-          </div>
-      </section>
-  
-      <!-- Success Stories Section -->
-      <section class="py-16 gradient-bg">
-          <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-              <div class="grid lg:grid-cols-2 gap-12 items-center">
-                  <!-- Pet illustration -->
-                  <div class="relative">
-                      <div class="w-96 h-80 bg-gradient-to-br from-orange-200 to-yellow-100 rounded-3xl flex items-center justify-center shadow-2xl mx-auto">
-                          <div class="text-8xl">🐕🐱</div>
-                      </div>
-                  </div>
-                  
-                  <div>
-                      <h2 class="text-3xl lg:text-4xl font-bold text-gray-900 mb-6">
-                          Success Stories:<br>
-                          <span class="text-pet-blue-600">Reunited at Last</span>
-                      </h2>
-                      
-                      <p class="text-lg text-gray-600 mb-8 leading-relaxed">
-                          Read heartwarming stories of pets who have been successfully reunited with their pets or helped who to found pets to their owners.
-                      </p>
-                      
-                      <!-- Questions -->
-                      <div class="space-y-4 mb-8">
-                          <div class="flex items-center justify-between bg-white rounded-lg p-4 shadow-sm">
-                              <span class="text-gray-700 font-medium">What kind of pet are you looking for?</span>
-                              <svg class="w-5 h-5 text-pet-blue-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
-                              </svg>
-                          </div>
-                          <div class="flex items-center justify-between bg-white rounded-lg p-4 shadow-sm">
-                              <span class="text-gray-700 font-medium">What kind of pet are you rehoming?</span>
-                              <svg class="w-5 h-5 text-pet-blue-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
-                              </svg>
-                          </div>
-                      </div>
-                      
-                      <a href="#" class="inline-flex items-center text-green-800 font-semibold   transition-colors">
-                          Help Now →
-                      </a>
-                  </div>
-              </div>
-          </div>
-      </section>
-  
-      <!-- Footer -->
+
+    <!-- Hero Section -->
+    <section class="hero-gradient  lg:py-24 relative overflow-hidden">
+        <div class=" inset-0 bg-black opacity-5"></div>
+        <div class="o px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="grid lg:grid-cols-2 gap-12 items-center">
+                <!-- Left Content -->
+                <div class="animate-fade-in">
+                    <div class="inline-flex items-center bg-red-100 text-red-800 px-4 py-2 rounded-full text-sm font-bold mb-6 animate-bounce-slow">
+                        <span class="mr-2">💔</span>
+                        ¿Tu mascota no aparece?
+                    </div>
+                    
+                    <h1 class="text-5xl lg:text-7xl font-black text-gray-900 mb-6 leading-tight">
+                        <span class="text-cooky-red">¡CADA SEGUNDO</span><br>
+                        <span class="text-cooky-blue underline decoration-cooky-orange decoration-8 underline-offset-8">CUENTA!</span>
+                    </h1>
+                    
+                    <div class="bg-white border-l-8 border-cooky-red p-6 mb-8 shadow-xl rounded-lg">
+                        <p class="text-xl text-gray-800 font-bold mb-4 leading-tight">
+                            <span class="text-cooky-red">No esperes más.</span> Convierte la angustia en acción.
+                        </p>
+                        <p class="text-lg text-gray-600 leading-relaxed">
+                            Con Cooky, <strong>activas una alerta masiva y geolocalizada</strong> para que miles de vecinos se unan a la búsqueda de inmediato.
+                        </p>
+                    </div>
+
+                    <!-- Stats -->
+                    <div class="grid grid-cols-3 gap-4 mb-8">
+                        <div class="text-center bg-white rounded-xl p-4 shadow-lg animate-heartbeat">
+                            <div class="text-3xl font-black text-cooky-green">9,000+</div>
+                            <div class="text-sm text-gray-600 font-semibold">Familias Reunidas</div>
+                        </div>
+                        <div class="text-center bg-white rounded-xl p-4 shadow-lg animate-heartbeat" style="animation-delay: 0.2s;">
+                            <div class="text-3xl font-black text-cooky-blue">47</div>
+                            <div class="text-sm text-gray-600 font-semibold">Últimas 24h</div>
+                        </div>
+                        <div class="text-center bg-white rounded-xl p-4 shadow-lg animate-heartbeat" style="animation-delay: 0.4s;">
+                            <div class="text-3xl font-black text-cooky-orange">83</div>
+                            <div class="text-sm text-gray-600 font-semibold">Búsquedas Activas</div>
+                        </div>
+                    </div>
+
+                    <!-- CTA Principal -->
+                    <div class="space-y-4">
+                        <button class="w-full bg-cooky-red text-white font-black text-xl py-4 rounded-2xl transition-all duration-200 shadow-2xl hover:shadow-3xl transform hover:-translate-y-1 hover:scale-105 animate-pulse-fast">
+                            🚨 ¡ACTIVAR ALERTA AHORA!
+                        </button>
+                        <p class="text-center text-sm text-gray-600">
+                            ⏰ <strong>Respuesta inmediata</strong> • 📱 <strong>Miles de celulares alertados</strong> • 🎯 <strong>Geolocalización precisa</strong>
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Right Content - Emotional Impact -->
+                <div class="relative animate-slide-up">
+                    <div class="relative">
+                        <!-- Main emotional image -->
+                        <div class="w-96 h-96 bg-gradient-to-br from-red-200 via-orange-200 to-yellow-200 rounded-3xl flex items-center justify-center shadow-2xl mx-auto border-8 border-white">
+                            <div class="text-center">
+                                <div class="text-8xl mb-4 animate-bounce-slow">😢🐕</div>
+                                <div class="text-lg font-bold text-gray-800">¿Dónde estás?</div>
+                            </div>
+                        </div>
+                        
+                        <!-- Success story floating cards -->
+                        <div class="absolute -top-4 -right-4 bg-cooky-green text-white rounded-2xl shadow-xl p-4 animate-bounce-slow transform rotate-3">
+                            <div class="text-3xl mb-2">🎉</div>
+                            <div class="text-sm font-bold">Luna</div>
+                            <div class="text-xs">¡Encontrada en 6 horas!</div>
+                        </div>
+                        
+                        <div class="absolute -bottom-6 -left-6 bg-cooky-blue text-white rounded-2xl shadow-xl p-4 animate-bounce-slow transform -rotate-3" style="animation-delay: 1s;">
+                            <div class="text-3xl mb-2">❤️</div>
+                            <div class="text-sm font-bold">Max</div>
+                            <div class="text-xs">¡Reunido en 24h!</div>
+                        </div>
+                    </div>
+                    
+                    <!-- Urgency Card -->
+                    <div class="absolute top-8 right-0 bg-cooky-red text-white rounded-2xl p-6 shadow-xl max-w-xs transform hover:rotate-0 transition-all duration-300">
+                        <div class="text-sm font-bold mb-2 flex items-center">
+                            <span class="animate-pulse-fast mr-2">⚡</span>
+                            TU HISTORIA TAMBIÉN PUEDE TENER UN FINAL FELIZ
+                        </div>
+                        <div class="text-xs opacity-90 leading-relaxed">
+                            Miles de vecinos están listos para ayudarte. Solo necesitas activar la alerta.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Cómo Funciona -->
+    <section id="como-funciona" class="py-16 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-4xl lg:text-5xl font-black text-gray-900 mb-6">
+                    🚀 <span class="text-cooky-blue">Así funciona Cooky</span>
+                </h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                    Tres pasos para un reencuentro rápido. <strong>Sin complicaciones, sin demoras.</strong>
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Step 1 -->
+                <div class="text-center group hover:transform hover:scale-105 transition-all duration-300">
+                    <div class="bg-cooky-red text-white w-20 h-20 rounded-full flex items-center justify-center text-3xl font-black mx-auto mb-6 shadow-xl group-hover:animate-pulse">
+                        1
+                    </div>
+                    <div class="bg-red-50 p-8 rounded-2xl shadow-lg">
+                        <h3 class="text-2xl font-black text-cooky-red mb-4">Activa tu alerta</h3>
+                        <p class="text-gray-700 leading-relaxed">
+                            Registramos la pérdida y configuramos un <strong>anuncio masivo</strong> en menos de 5 minutos.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Step 2 -->
+                <div class="text-center group hover:transform hover:scale-105 transition-all duration-300">
+                    <div class="bg-cooky-blue text-white w-20 h-20 rounded-full flex items-center justify-center text-3xl font-black mx-auto mb-6 shadow-xl group-hover:animate-pulse">
+                        2
+                    </div>
+                    <div class="bg-blue-50 p-8 rounded-2xl shadow-lg">
+                        <h3 class="text-2xl font-black text-cooky-blue mb-4">Difusión geolocalizada</h3>
+                        <p class="text-gray-700 leading-relaxed">
+                            Publicamos en <strong>Facebook, Instagram, WhatsApp y Wapin.</strong> Tu anuncio llega a miles de celulares en la zona.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Step 3 -->
+                <div class="text-center group hover:transform hover:scale-105 transition-all duration-300">
+                    <div class="bg-cooky-green text-white w-20 h-20 rounded-full flex items-center justify-center text-3xl font-black mx-auto mb-6 shadow-xl group-hover:animate-pulse">
+                        3
+                    </div>
+                    <div class="bg-green-50 p-8 rounded-2xl shadow-lg">
+                        <h3 class="text-2xl font-black text-cooky-green mb-4">Vecinos en acción</h3>
+                        <p class="text-gray-700 leading-relaxed">
+                            Personas cercanas ayudan a <strong>identificar y reportar avistamientos</strong> en tiempo real.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Urgency Section -->
+    <section class="urgency-gradient py-16">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <div class="bg-white rounded-3xl p-12 shadow-2xl">
+                <h2 class="text-4xl font-black text-cooky-red mb-6">
+                    ⏰ EL TIEMPO ES VITAL
+                </h2>
+                <div class="grid md:grid-cols-2 gap-8 mb-8">
+                    <div class="bg-red-50 p-6 rounded-xl border-l-4 border-cooky-red">
+                        <h3 class="text-xl font-bold text-cooky-red mb-2">Primera hora:</h3>
+                        <p class="text-gray-700">85% de probabilidad de recuperación exitosa</p>
+                    </div>
+                    <div class="bg-orange-50 p-6 rounded-xl border-l-4 border-cooky-orange">
+                        <h3 class="text-xl font-bold text-cooky-orange mb-2">Después de 24h:</h3>
+                        <p class="text-gray-700">La probabilidad se reduce al 45%</p>
+                    </div>
+                </div>
+                <button class="bg-cooky-red text-white font-black text-2xl px-12 py-4 rounded-2xl shadow-2xl hover:shadow-3xl transform hover:-translate-y-2 transition-all duration-200 animate-heartbeat">
+                    🚨 ¡NO ESPERES MÁS!
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Planes de Rescate -->
+    <section id="planes" class="py-16 pricing-gradient">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-4xl lg:text-5xl font-black text-gray-900 mb-6">
+                    📦 <span class="text-cooky-blue">Planes de rescate Cooky</span>
+                </h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                    Elige el plan que mejor se adapte a tu situación. <strong>Todos incluyen garantía de satisfacción.</strong>
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Plan Lassie -->
+                <div class="bg-white rounded-3xl shadow-xl p-8 relative hover:transform hover:scale-105 transition-all duration-300 border-4 border-transparent hover:border-cooky-blue">
+                    <div class="text-center mb-6">
+                        <div class="text-6xl mb-4">🐕</div>
+                        <h3 class="text-2xl font-black text-cooky-blue mb-2">Plan Lassie</h3>
+                        <p class="text-gray-600 font-semibold">Búsqueda Esencial</p>
+                        <div class="bg-blue-50 p-3 rounded-lg mt-4">
+                            <p class="text-sm text-cooky-blue font-bold">Cobertura 5 km</p>
+                        </div>
+                    </div>
+
+                    <div class="text-center mb-6">
+                        <div class="text-lg text-gray-500 line-through">MXN $847</div>
+                        <div class="text-4xl font-black text-cooky-red">$651</div>
+                        <div class="text-sm text-gray-600">Precio de lanzamiento</div>
+                    </div>
+
+                    <ul class="space-y-3 mb-8">
+                        <li class="flex items-center">
+                            <span class="text-cooky-green mr-2">✅</span>
+                            <span class="text-gray-700">4 días de publicidad activa</span>
+                        </li>
+                        <li class="flex items-center">
+                            <span class="text-cooky-green mr-2">✅</span>
+                            <span class="text-gray-700">12,500 - 25,500 personas alcanzadas</span>
+                        </li>
+                        <li class="flex items-center">
+                            <span class="text-cooky-green mr-2">✅</span>
+                            <span class="text-gray-700">Publicación en Wapin</span>
+                        </li>
+                        <li class="flex items-center">
+                            <span class="text-cooky-green mr-2">✅</span>
+                            <span class="text-gray-700">Facebook & Instagram Stories</span>
+                        </li>
+                        <li class="flex items-center">
+                            <span class="text-cooky-green mr-2">✅</span>
+                            <span class="text-gray-700">Video Alerta y Reels</span>
+                        </li>
+                    </ul>
+
+                    <button class="w-full bg-cooky-blue text-white font-black py-4 rounded-xl hover:bg-blue-700 transform hover:-translate-y-1 transition-all duration-200">
+                        🚨 ACTIVAR ALERTA
+                    </button>
+                </div>
+
+                <!-- Plan Garfield - POPULAR -->
+                <div class="bg-white rounded-3xl shadow-2xl p-8 relative hover:transform hover:scale-105 transition-all duration-300 border-4 border-cooky-orange scale-110">
+                    <div class="absolute -top-4 left-1/2 transform -translate-x-1/2">
+                        <div class="bg-cooky-orange text-white px-6 py-2 rounded-full text-sm font-black">
+                            ⭐ MÁS POPULAR
+                        </div>
+                    </div>
+
+                    <div class="text-center mb-6">
+                        <div class="text-6xl mb-4">🐈</div>
+                        <h3 class="text-2xl font-black text-cooky-orange mb-2">Plan Garfield</h3>
+                        <p class="text-gray-600 font-semibold">Búsqueda Ampliada</p>
+                        <div class="bg-orange-50 p-3 rounded-lg mt-4">
+                            <p class="text-sm text-cooky-orange font-bold">Cobertura 12 km</p>
+                        </div>
+                    </div>
+
+                    <div class="text-center mb-6">
+                        <div class="text-lg text-gray-500 line-through">MXN $1,330</div>
+                        <div class="text-4xl font-black text-cooky-red">$1,023</div>
+                        <div class="text-sm text-gray-600">Precio de lanzamiento</div>
+                    </div>
+
+                    <ul class="space-y-3 mb-8">
+                        <li class="flex items-center">
+                            <span class="text-cooky-green mr-2">✅</span>
+                            <span class="text-gray-700">8 días de publicidad activa</span>
+                        </li>
+                        <li class="flex items-center">
+                            <span class="text-cooky-green mr-2">✅</span>
+                            <span class="text-gray-700">68,500 - 82,500 personas alcanzadas</span>
+                        </li>
+                        <li class="flex items-center">
+                            <span class="text-cooky-green mr-2">✅</span>
+                            <span class="text-gray-700">Seguimiento básico</span>
+                        </li>
+                        <li class="flex items-center">
+                            <span class="text-cooky-green mr-2">✅</span>
+                            <span class="text-gray-700">Publicación en Wapin</span>
+                        </li>
+                        <li class="flex items-center">
+                            <span class="text-cooky-green mr-2">✅</span>
+                            <span class="text-gray-700">Facebook & Instagram Stories</span>
+                        </li>
+                        <li class="flex items-center">
+                            <span class="text-cooky-green mr-2">✅</span>
+                            <span class="text-gray-700">Video Alerta y Reels</span>
+                        </li>
+                    </ul>
+
+                    <button class="w-full bg-cooky-orange text-white font-black py-4 rounded-xl hover:bg-orange-700 transform hover:-translate-y-1 transition-all duration-200 animate-pulse">
+                        🚨 ACTIVAR ALERTA
+                    </button>
+                </div>
+
+                <!-- Plan Beethoven -->
+                <div class="bg-white rounded-3xl shadow-xl p-8 relative hover:transform hover:scale-105 transition-all duration-300 border-4 border-transparent hover:border-cooky-green">
+                    <div class="text-center mb-6">
+                        <div class="text-6xl mb-4">🎶</div>
+                        <h3 class="text-2xl font-black text-cooky-green mb-2">Plan Beethoven</h3>
+                        <p class="text-gray-600 font-semibold">Búsqueda Total</p>
+                        <div class="bg-green-50 p-3 rounded-lg mt-4">
+                            <p class="text-sm text-cooky-green font-bold">¡Alerta Máxima! 30 km</p>
+                        </div>
+                    </div>
+
+                    <div class="text-center mb-6">
+                        <div class="text-lg text-gray-500 line-through">MXN $2,298</div>
+                        <div class="text-4xl font-black text-cooky-red">$1,767</div>
+                        <div class="text-sm text-gray-600">Precio de lanzamiento</div>
+                    </div>
+
+                    <ul class="space-y-3 mb-8">
+                        <li class="flex items-center">
+                            <span class="text-cooky-green mr-2">✅</span>
+                            <span class="text-gray-700">15 días de publicidad intensa</span>
+                        </li>
+                        <li class="flex items-center">
+                            <span class="text-cooky-green mr-2">✅</span>
+                            <span class="text-gray-700">120,500 - 212,500 personas alcanzadas</span>
+                        </li>
+                        <li class="flex items-center">
+                            <span class="text-cooky-green mr-2">✅</span>
+                            <span class="text-gray-700">Seguimiento y monitoreo activo</span>
+                        </li>
+                        <li class="flex items-center">
+                            <span class="text-cooky-green mr-2">✅</span>
+                            <span class="text-gray-700">Publicación en Wapin</span>
+                        </li>
+                        <li class="flex items-center">
+                            <span class="text-cooky-green mr-2">✅</span>
+                            <span class="text-gray-700">Facebook & Instagram Stories</span>
+                        </li>
+                        <li class="flex items-center">
+                            <span class="text-cooky-green mr-2">✅</span>
+                            <span class="text-gray-700">Video Alerta y Reels</span>
+                        </li>
+                    </ul>
+
+                    <button class="w-full bg-cooky-green text-white font-black py-4 rounded-xl hover:bg-green-700 transform hover:-translate-y-1 transition-all duration-200">
+                        🚨 ACTIVAR ALERTA
+                    </button>
+                </div>
+            </div>
+
+            <!-- Guarantee -->
+            <div class="text-center mt-12">
+                <div class="inline-flex items-center bg-green-100 text-green-800 px-6 py-3 rounded-full font-bold">
+                    <span class="mr-2">🛡️</span>
+                    Garantía de satisfacción del 100% o te devolvemos tu dinero
+                </div>
+            </div>
+        </div>
+    </section>
      
   
       <script>

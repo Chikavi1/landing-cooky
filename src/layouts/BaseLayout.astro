@@ -1,9 +1,6 @@
 ---
-import Header from '../components/Header.jsx';
-import Footer from '../components/Footer.astro';
-
-import '../styles/global.css';
-
+import App from "../components/App.jsx";
+import "../styles/global.css";
 ---
 
 <html lang="es">
@@ -11,14 +8,10 @@ import '../styles/global.css';
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Plataforma Mascotas Perdidas</title>
-   </head>
-  <body class="font-sans  ">
-    <!-- <MetaPixel /> -->
-    <Header   client:load/>
-    <main class="max-w-7xl mx-auto p-4">
+  </head>
+  <body class="font-sans">
+    <App client:load>
       <slot />
-    </main>
-    <Footer />
+    </App>
   </body>
 </html>
-

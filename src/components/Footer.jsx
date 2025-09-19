@@ -1,7 +1,15 @@
+ 
+import { useLanguage } from '../context/LanguageContext.jsx';
+
+export default function Footer() {
+    const { t  } = useLanguage();
+
+  return (
+ 
  <footer class="bg-gray-50 py-12 border-t">
           <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
               <div class="grid md:grid-cols-4 gap-8">
-                  <!-- Company Info -->
+                  
                   <div>
                       <div class="flex items-center space-x-2 mb-4">
                           <div class="w-8 h-8 bg-pet-blue-500 rounded-lg flex items-center justify-center">
@@ -12,12 +20,11 @@
                       <p class="text-gray-600 text-sm leading-relaxed mb-4">
                           Let's work together to find and reunite lost pets with their loving families.
                       </p>
-                      <div class="text-sm text-pet-blue-600 font-medium">Get MyPets →</div>
+                       <div class="text-sm text-pet-blue-600 font-medium">Get MyPets →</div>
                   </div>
                   
-                  <!-- Links Columns -->
                   <div>
-                      <h3 class="font-semibold text-gray-900 mb-4">Found Pets</h3>
+                      <h3 class="font-semibold text-gray-900 mb-4">{t.navbar.pricing}</h3>
                       <div class="space-y-2 text-sm">
                           <div><a href="#" class="text-gray-600 hover:text-pet-blue-600 transition-colors">Success Story</a></div>
                           <div><a href="#" class="text-gray-600 hover:text-pet-blue-600 transition-colors">Pet Care</a></div>
@@ -53,3 +60,6 @@
               </div>
           </div>
       </footer>
+
+        );
+}
