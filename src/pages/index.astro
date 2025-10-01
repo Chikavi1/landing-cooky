@@ -1,114 +1,51 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
-import ReportCard from '../components/ReportCard.astro';
 
 const reportes = [
   { nombre: 'Firulais', ubicacion: 'CDMX', fecha: '2025-09-15', descripcion: 'Perdido cerca del parque', imagen: '/img/firulais.jpg' },
   { nombre: 'Michi', ubicacion: 'Guadalajara', fecha: '2025-09-16', descripcion: 'Gato gris perdido', imagen: '/img/michi.jpg' }
 ];
 ---
+ 
+<BaseLayout >
 
-<BaseLayout>
-  <!-- <h2 class="text-2xl font-bold mb-4">Reportes recientes</h2>
-  {reportes.map(m => <ReportCard mascota={m} />)} -->
+  <div  >
 
-  <div class="antialiased text-gray-800">
-    
+    <section class="bg-[#2c6e49] -mt-16 relative h-screen overflow-hidden flex flex-col justify-between text-center text-white px-6 md:py-12">
 
-  
+  <!-- Patrón de patitas con CSS puro -->
+  <div class="absolute inset-0 pointer-events-none z-0 patitas-pattern"></div>
 
-    <!-- Hero Section -->
-    <section class="hero-gradient  lg:py-24 relative overflow-hidden">
-        <div class=" inset-0 bg-black opacity-5"></div>
-        <div class="o px-4 sm:px-6 lg:px-8 relative z-10">
-            <div class="grid lg:grid-cols-2 gap-12 items-center">
-                <!-- Left Content -->
-                <div class="animate-fade-in">
-                    <div class="inline-flex items-center bg-red-100 text-red-800 px-4 py-2 rounded-full text-sm font-bold mb-6 animate-bounce-slow">
-                        <span class="mr-2">💔</span>
-                        ¿Tu mascota no aparece?
-                    </div>
-                    
-                    <h1 class="text-5xl lg:text-7xl font-black text-gray-900 mb-6 leading-tight">
-                        <span class="text-cooky-red">¡CADA SEGUNDO</span><br>
-                        <span class="text-cooky-blue underline decoration-cooky-orange decoration-8 underline-offset-8">CUENTA!</span>
-                    </h1>
-                    
-                    <div class="bg-white border-l-8 border-cooky-red p-6 mb-8 shadow-xl rounded-lg">
-                        <p class="text-xl text-gray-800 font-bold mb-4 leading-tight">
-                            <span class="text-cooky-red">No esperes más.</span> Convierte la angustia en acción.
-                        </p>
-                        <p class="text-lg text-gray-600 leading-relaxed">
-                            Con Cooky, <strong>activas una alerta masiva y geolocalizada</strong> para que miles de vecinos se unan a la búsqueda de inmediato.
-                        </p>
-                    </div>
+  <!-- Contenido arriba -->
+  <div class="z-10 space-y-8">
+    <h1 class="text-4xl   md:text-6xl font-extrabold tracking-tight drop-shadow-lg mt-52 md:mt-24">
+      ¡Cada segundo cuenta!
+    </h1>
+    <h2 class="text-xl md:text-4xl font-normal drop-shadow">
+      Activa una búsqueda masiva y geolocalizada en menos de 3 minutos <br>para ayudar a tu mascota a volver a casa.
+    </h2>
 
-                    <!-- Stats -->
-                    <div class="grid grid-cols-3 gap-4 mb-8">
-                        <div class="text-center bg-white rounded-xl p-4 shadow-lg animate-heartbeat">
-                            <div class="text-3xl font-black text-cooky-green">9,000+</div>
-                            <div class="text-sm text-gray-600 font-semibold">Familias Reunidas</div>
-                        </div>
-                        <div class="text-center bg-white rounded-xl p-4 shadow-lg animate-heartbeat" style="animation-delay: 0.2s;">
-                            <div class="text-3xl font-black text-cooky-blue">47</div>
-                            <div class="text-sm text-gray-600 font-semibold">Últimas 24h</div>
-                        </div>
-                        <div class="text-center bg-white rounded-xl p-4 shadow-lg animate-heartbeat" style="animation-delay: 0.4s;">
-                            <div class="text-3xl font-black text-cooky-orange">83</div>
-                            <div class="text-sm text-gray-600 font-semibold">Búsquedas Activas</div>
-                        </div>
-                    </div>
+    <div class="mt-8 flex gap-4 z-10 flex-wrap justify-center">
+      <a href="https://app-cooky.netlify.app/report" class="bg-[#1E235A] text-white font-semibold px-6 py-3 rounded-2xl shadow-lg hover:bg-gray-100 transition">
+        Reportar ya
+      </a>
+      <button class="bg-transparent border-2 border-white px-6 py-3 rounded-2xl font-semibold hover:bg-white hover:text-[#2c6e49] transition">
+        ¡Cómo funciona?
+      </button>
+    </div>
+  </div>
 
-                    <!-- CTA Principal -->
-                    <div class="space-y-4">
-                        <button class="w-full bg-cooky-red text-white font-black text-xl py-4 rounded-2xl transition-all duration-200 shadow-2xl hover:shadow-3xl transform hover:-translate-y-1 hover:scale-105 animate-pulse-fast">
-                            🚨 ¡ACTIVAR ALERTA AHORA!
-                        </button>
-                        <p class="text-center text-sm text-gray-600">
-                            ⏰ <strong>Respuesta inmediata</strong> • 📱 <strong>Miles de celulares alertados</strong> • 🎯 <strong>Geolocalización precisa</strong>
-                        </p>
-                    </div>
-                </div>
+  <!-- Imagen hasta abajo -->
+  <!-- src="https://i.ibb.co/7J3dGz4m/Agregar-un-subt-tulo-1.png"  -->
+  <img 
+    class="md:mx-auto mt-12 md:mt-0 w-full md:max-w-7xl md:object-contain pointer-events-none "
+    src="https://i.ibb.co/pBvRPpjx/Agregar-un-subt-tulo-3.png"
+    alt="Mascota desaparecida ilustración"
+  />
+</section>
 
-                <!-- Right Content - Emotional Impact -->
-                <div class="relative animate-slide-up">
-                    <div class="relative">
-                        <!-- Main emotional image -->
-                        <div class="w-96 h-96 bg-gradient-to-br from-red-200 via-orange-200 to-yellow-200 rounded-3xl flex items-center justify-center shadow-2xl mx-auto border-8 border-white">
-                            <div class="text-center">
-                                <div class="text-8xl mb-4 animate-bounce-slow">😢🐕</div>
-                                <div class="text-lg font-bold text-gray-800">¿Dónde estás?</div>
-                            </div>
-                        </div>
-                        
-                        <!-- Success story floating cards -->
-                        <div class="absolute -top-4 -right-4 bg-cooky-green text-white rounded-2xl shadow-xl p-4 animate-bounce-slow transform rotate-3">
-                            <div class="text-3xl mb-2">🎉</div>
-                            <div class="text-sm font-bold">Luna</div>
-                            <div class="text-xs">¡Encontrada en 6 horas!</div>
-                        </div>
-                        
-                        <div class="absolute -bottom-6 -left-6 bg-cooky-blue text-white rounded-2xl shadow-xl p-4 animate-bounce-slow transform -rotate-3" style="animation-delay: 1s;">
-                            <div class="text-3xl mb-2">❤️</div>
-                            <div class="text-sm font-bold">Max</div>
-                            <div class="text-xs">¡Reunido en 24h!</div>
-                        </div>
-                    </div>
-                    
-                    <!-- Urgency Card -->
-                    <div class="absolute top-8 right-0 bg-cooky-red text-white rounded-2xl p-6 shadow-xl max-w-xs transform hover:rotate-0 transition-all duration-300">
-                        <div class="text-sm font-bold mb-2 flex items-center">
-                            <span class="animate-pulse-fast mr-2">⚡</span>
-                            TU HISTORIA TAMBIÉN PUEDE TENER UN FINAL FELIZ
-                        </div>
-                        <div class="text-xs opacity-90 leading-relaxed">
-                            Miles de vecinos están listos para ayudarte. Solo necesitas activar la alerta.
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+
+
 
     <!-- Cómo Funciona -->
     <section id="como-funciona" class="py-16 bg-white">
