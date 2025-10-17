@@ -18,12 +18,14 @@ export default function Header() {
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
           <div className="flex items-center space-x-3">
+            
             <div className="w-10 h-10 bg-pet-blue-500 rounded-xl flex items-center justify-center shadow-lg">
               <span className="text-white text-lg font-bold">🐾</span>
             </div>
+
             <div>
-              <div className="font-bold text-xl text-white">Cooky</div>
-              <div className="text-xs text-white">Encuentra a tu mascota</div>
+              <div className="font-bold text-xl text-[#1E235A] ">Cooky</div>
+              <div className="text-xs text-[#1E235A]">Encuentra a tu mascota</div>
             </div>
           </div>
 

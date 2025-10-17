@@ -39,7 +39,7 @@ const reportes = [
   <!-- src="https://i.ibb.co/7J3dGz4m/Agregar-un-subt-tulo-1.png"  -->
   <img 
     class="md:mx-auto mt-12 md:mt-0 w-full md:max-w-7xl md:object-contain pointer-events-none "
-    src="https://i.ibb.co/pBvRPpjx/Agregar-un-subt-tulo-3.png"
+    src="/public/pet-intro.png"
     alt="Mascota desaparecida ilustración"
   />
 </section>
@@ -120,95 +120,101 @@ const reportes = [
 </section>
 
 
-    <!-- Urgency Section -->
-    <section class="py-20">
+<!-- Urgency Section -->
+<section class="py-20 bg-gray-50">
   <div class="max-w-7xl mx-auto px-6 lg:px-8">
     <div class="bg-white rounded-3xl p-12 shadow-xl">
-      
+
       <!-- Título y descripción -->
-      <div class="grid md:grid-cols-2 gap-8 mb-16">
+      <div class="grid md:grid-cols-2 gap-8 mb-16 items-center">
         <div>
-          <p class="text-sm font-semibold text-gray-500 mb-2">BÚSQUEDA RÁPIDA</p>
-          <h2 class="text-4xl font-extrabold text-gray-900 mb-4">
-            El tiempo es vital en una búsqueda.
+          <p class="text-sm font-semibold text-gray-500 mb-2 uppercase tracking-wider">Búsqueda Rápida</p>
+          <h2 class="text-4xl lg:text-5xl font-extrabold text-gray-900 mb-4 leading-tight">
+            El tiempo es vital en una búsqueda
           </h2>
         </div>
         <div>
-          <p class="text-gray-600 text-lg">
+          <p class="text-gray-600 text-lg leading-relaxed">
             Nuestra plataforma está diseñada para reaccionar de inmediato. 
             <span class="font-semibold text-red-600">Disponible 24/7</span>, 
-            con publicación <span class="font-semibold text-orange-500">instantánea</span> 
+            con publicación <span class="font-semibold text-yellow-600">instantánea</span> 
             y el respaldo de un equipo humano y tecnología publicitaria avanzada.
           </p>
         </div>
       </div>
 
-      <!-- Features -->
-      <div class="grid md:grid-cols-3 gap-10">
-        
-        <div class="text-left">
-          <svg class="w-8 h-8 text-red-600 mb-4" fill="none" stroke="currentColor" stroke-width="2"
-            viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round"
-              d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/>
-          </svg>
+      <!-- Features principales -->
+      <div class="grid md:grid-cols-3 gap-8">
+        <div class="bg-gray-50 rounded-xl p-6 text-center shadow-sm hover:shadow-md transition-shadow">
+          <div class="flex justify-center mb-4">
+            <svg class="w-10 h-10 text-red-600" fill="none" stroke="currentColor" stroke-width="2"
+              viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round"
+                d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/>
+            </svg>
+          </div>
           <h3 class="text-lg font-semibold text-gray-900 mb-2">En la primera hora</h3>
-          <p class="text-gray-600">
+          <p class="text-gray-600 text-sm">
             Tienes hasta un <span class="font-bold">85% de éxito</span> en la recuperación de tu mascota.
           </p>
         </div>
 
-        <div class="text-left">
-          <svg class="w-8 h-8 text-orange-500 mb-4" fill="none" stroke="currentColor" stroke-width="2"
-            viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round"
-              d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/>
-          </svg>
+        <div class="bg-gray-50 rounded-xl p-6 text-center shadow-sm hover:shadow-md transition-shadow">
+          <div class="flex justify-center mb-4">
+            <svg class="w-10 h-10 text-yellow-600" fill="none" stroke="currentColor" stroke-width="2"
+              viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round"
+                d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/>
+            </svg>
+          </div>
           <h3 class="text-lg font-semibold text-gray-900 mb-2">Después de 24 horas</h3>
-          <p class="text-gray-600">
+          <p class="text-gray-600 text-sm">
             La probabilidad de encontrarla baja a solo <span class="font-bold">45%</span>.
           </p>
         </div>
 
-        <div class="text-left">
-          <svg class="w-8 h-8 text-green-600 mb-4" fill="none" stroke="currentColor" stroke-width="2"
-            viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round"
-              d="M9 17v2h6v-2m0-4H9V7a3 3 0 116 0v6z"/>
-          </svg>
+        <div class="bg-gray-50 rounded-xl p-6 text-center shadow-sm hover:shadow-md transition-shadow">
+          <div class="flex justify-center mb-4">
+            <svg class="w-10 h-10 text-green-600" fill="none" stroke="currentColor" stroke-width="2"
+              viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round"
+                d="M9 17v2h6v-2m0-4H9V7a3 3 0 116 0v6z"/>
+            </svg>
+          </div>
           <h3 class="text-lg font-semibold text-gray-900 mb-2">Apoyo constante</h3>
-          <p class="text-gray-600">
+          <p class="text-gray-600 text-sm">
             Nuestro equipo humano supervisa cada publicación para maximizar tus posibilidades de éxito.
           </p>
         </div>
-
       </div>
 
       <!-- Extra features -->
-      <div class="grid md:grid-cols-2 gap-10 mt-12">
-        
-        <div class="flex items-start space-x-3">
-          <svg class="w-6 h-6 text-red-600 mt-1" fill="none" stroke="currentColor" stroke-width="2" 
-            viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/>
-          </svg>
-          <p class="text-gray-700"><span class="font-semibold">Anuncios inmediatos</span> sin demoras ni procesos complicados.</p>
-        </div>
-        
-        <div class="flex items-start space-x-3">
-          <svg class="w-6 h-6 text-orange-500 mt-1" fill="none" stroke="currentColor" stroke-width="2" 
-            viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" d="M3 7v4h18V7M3 17h18"/>
-          </svg>
-          <p class="text-gray-700"><span class="font-semibold">Difusión masiva</span> con la red publicitaria de Meta Ads.</p>
+      <div class="grid md:grid-cols-2 gap-6 mt-12">
+        <div class="flex items-start gap-4">
+          <span class="text-red-600 mt-1">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2"
+              viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/>
+            </svg>
+          </span>
+          <p class="text-gray-700 text-sm"><span class="font-semibold">Anuncios inmediatos</span> sin demoras ni procesos complicados.</p>
         </div>
 
+        <div class="flex items-start gap-4">
+          <span class="text-yellow-600 mt-1">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2"
+              viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M3 7v4h18V7M3 17h18"/>
+            </svg>
+          </span>
+          <p class="text-gray-700 text-sm"><span class="font-semibold">Difusión masiva</span> con la red publicitaria de Meta Ads.</p>
+        </div>
       </div>
 
       <!-- CTA -->
       <div class="text-center mt-12">
         <a href="#publicar" 
-          class="inline-block bg-red-600 text-white font-bold text-lg px-10 py-4 rounded-xl shadow-lg hover:shadow-2xl transition-transform transform hover:-translate-y-1">
+          class="inline-block bg-red-600 text-white font-bold text-lg px-12 py-4 rounded-2xl shadow-lg hover:shadow-xl transition-transform transform hover:-translate-y-1">
           Publica ahora y aumenta tus posibilidades
         </a>
       </div>
@@ -220,13 +226,13 @@ const reportes = [
 
 
     <!-- Planes de Rescate -->
-   <section id="planes" class="py-20 bg-gradient-to-b from-gray-50 to-white">
+ <section id="planes" class="py-20 bg-gray-50">
   <div class="max-w-7xl mx-auto px-6 lg:px-8">
     
     <!-- Header -->
     <div class="text-center mb-16">
       <h2 class="text-4xl lg:text-5xl font-extrabold text-gray-900 mb-4">
-        Planes de Rescate <span class="text-cooky-blue">Cooky</span>
+        Planes de Rescate <span class="text-blue-600">Cooky</span>
       </h2>
       <p class="text-lg text-gray-600 max-w-3xl mx-auto">
         Elige el plan que mejor se adapte a tu situación.  
@@ -235,94 +241,94 @@ const reportes = [
     </div>
 
     <!-- Pricing Grid -->
-    <div class="grid md:grid-cols-3 gap-10">
-      
-      <!-- Plan Básico -->
-      <div class="bg-white rounded-2xl shadow-lg border border-gray-100 hover:shadow-2xl transition-all p-8 flex flex-col">
-        <h3 class="text-2xl font-bold text-cooky-blue mb-2">Plan Lassie</h3>
-        <p class="text-gray-500 mb-6">Búsqueda Esencial</p>
+    <div class="grid md:grid-cols-3 gap-8">
 
-        <div class="bg-blue-50 rounded-lg p-3 mb-6 inline-block text-cooky-blue font-semibold text-sm">
+      <!-- Plan Básico -->
+      <div class="bg-white rounded-xl shadow-md border border-gray-200 p-8 flex flex-col">
+        <h3 class="text-xl font-semibold text-gray-800 mb-2">Plan Lassie</h3>
+        <p class="text-gray-500 mb-4">Búsqueda Esencial</p>
+
+        <div class="bg-blue-50 text-blue-600 font-medium text-sm px-3 py-1 rounded mb-6 inline-block">
           Cobertura 5 km
         </div>
 
         <div class="mb-6">
-          <p class="text-sm text-gray-400 line-through">MXN $847</p>
-          <p class="text-3xl font-extrabold text-cooky-red">MXN $651</p>
-          <p class="text-xs text-gray-500">Precio de lanzamiento</p>
+          <p class="text-gray-400 text-sm line-through">MXN $847</p>
+          <p class="text-3xl font-extrabold text-gray-900">MXN $651</p>
+          <p class="text-gray-500 text-xs mt-1">Precio de lanzamiento</p>
         </div>
 
-        <ul class="space-y-3 mb-8 text-gray-700 flex-grow">
-          <li class="flex items-center"><svg class="w-5 h-5 text-cooky-green mr-2" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>4 días de publicidad activa</li>
-          <li class="flex items-center"><svg class="w-5 h-5 text-cooky-green mr-2" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>12,500 - 25,500 personas alcanzadas</li>
-          <li class="flex items-center"><svg class="w-5 h-5 text-cooky-green mr-2" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>Publicación en Wapin</li>
-          <li class="flex items-center"><svg class="w-5 h-5 text-cooky-green mr-2" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>Facebook & Instagram Stories</li>
-          <li class="flex items-center"><svg class="w-5 h-5 text-cooky-green mr-2" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>Video Alerta y Reels</li>
+        <ul class="mb-8 space-y-3 text-gray-700 flex-grow">
+          <li class="flex items-center gap-2"><span class="text-green-500">✔</span>4 días de publicidad activa</li>
+          <li class="flex items-center gap-2"><span class="text-green-500">✔</span>12,500 - 25,500 personas alcanzadas</li>
+          <li class="flex items-center gap-2"><span class="text-green-500">✔</span>Publicación en Wapin</li>
+          <li class="flex items-center gap-2"><span class="text-green-500">✔</span>Facebook & Instagram Stories</li>
+          <li class="flex items-center gap-2"><span class="text-green-500">✔</span>Video Alerta y Reels</li>
         </ul>
 
-        <button class="w-full bg-blue-700 text-white font-semibold py-3 rounded-lg hover:bg-blue-700 transition">
+        <button class="w-full bg-blue-600 text-white font-semibold py-3 rounded-lg hover:bg-blue-700 transition">
           Activar alerta
         </button>
       </div>
 
       <!-- Plan Popular -->
-      <div class="bg-white rounded-2xl shadow-xl border-2 border-cooky-orange p-8 relative scale-105 flex flex-col">
-        <span class="absolute -top-4 left-1/2 transform -translate-x-1/2 bg-cooky-orange text-white px-4 py-1 rounded-full text-xs font-bold">
+      <div class="bg-white rounded-xl shadow-lg border-2 border-blue-600 p-8 relative flex flex-col scale-105">
+        <span class="absolute -top-3 left-1/2 transform -translate-x-1/2 bg-blue-600 text-white px-3 py-1 rounded-full text-xs font-bold">
           Más popular
         </span>
-        
-        <h3 class="text-2xl font-bold text-cooky-orange mb-2">Plan Garfield</h3>
-        <p class="text-gray-500 mb-6">Búsqueda Ampliada</p>
 
-        <div class="bg-orange-50 rounded-lg p-3 mb-6 inline-block text-cooky-orange font-semibold text-sm">
+        <h3 class="text-xl font-semibold text-gray-900 mb-2">Plan Garfield</h3>
+        <p class="text-gray-500 mb-4">Búsqueda Ampliada</p>
+
+        <div class="bg-blue-50 text-blue-600 font-medium text-sm px-3 py-1 rounded mb-6 inline-block">
           Cobertura 12 km
         </div>
 
         <div class="mb-6">
-          <p class="text-sm text-gray-400 line-through">MXN $1,330</p>
-          <p class="text-3xl font-extrabold text-cooky-red">MXN $1,023</p>
-          <p class="text-xs text-gray-500">Precio de lanzamiento</p>
+          <p class="text-gray-400 text-sm line-through">MXN $1,330</p>
+          <p class="text-3xl font-extrabold text-gray-900">MXN $1,023</p>
+          <p class="text-gray-500 text-xs mt-1">Precio de lanzamiento</p>
         </div>
 
-        <ul class="space-y-3 mb-8 text-gray-700 flex-grow">
-          <li class="flex items-center"><svg class="w-5 h-5 text-cooky-green mr-2" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>8 días de publicidad activa</li>
-          <li class="flex items-center"><svg class="w-5 h-5 text-cooky-green mr-2" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>68,500 - 82,500 personas alcanzadas</li>
-          <li class="flex items-center"><svg class="w-5 h-5 text-cooky-green mr-2" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>Seguimiento básico</li>
-          <li class="flex items-center"><svg class="w-5 h-5 text-cooky-green mr-2" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>Publicación en Wapin</li>
-          <li class="flex items-center"><svg class="w-5 h-5 text-cooky-green mr-2" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>Facebook & Instagram Stories</li>
-          <li class="flex items-center"><svg class="w-5 h-5 text-cooky-green mr-2" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>Video Alerta y Reels</li>
+        <ul class="mb-8 space-y-3 text-gray-700 flex-grow">
+          <li class="flex items-center gap-2"><span class="text-green-500">✔</span>8 días de publicidad activa</li>
+          <li class="flex items-center gap-2"><span class="text-green-500">✔</span>68,500 - 82,500 personas alcanzadas</li>
+          <li class="flex items-center gap-2"><span class="text-green-500">✔</span>Seguimiento básico</li>
+          <li class="flex items-center gap-2"><span class="text-green-500">✔</span>Publicación en Wapin</li>
+          <li class="flex items-center gap-2"><span class="text-green-500">✔</span>Facebook & Instagram Stories</li>
+          <li class="flex items-center gap-2"><span class="text-green-500">✔</span>Video Alerta y Reels</li>
         </ul>
 
-        <button class="w-full bg-orange-700 text-white font-semibold py-3 rounded-lg hover:bg-orange-700 transition">
+        <button class="w-full bg-blue-600 text-white font-semibold py-3 rounded-lg hover:bg-blue-700 transition">
           Activar alerta
         </button>
       </div>
 
       <!-- Plan Premium -->
-      <div class="bg-white rounded-2xl shadow-lg border border-gray-100 hover:shadow-2xl transition-all p-8 flex flex-col">
-        <h3 class="text-2xl font-bold text-cooky-green mb-2">Plan Beethoven</h3>
-        <p class="text-gray-500 mb-6">Búsqueda Total</p>
+      <div class="bg-white rounded-xl shadow-md border border-gray-200 p-8 flex flex-col">
+        <h3 class="text-xl font-semibold text-gray-800 mb-2">Plan Beethoven</h3>
+        <p class="text-gray-500 mb-4">Búsqueda Total</p>
 
-        <div class="bg-green-50 rounded-lg p-3 mb-6 inline-block text-cooky-green font-semibold text-sm">
+        <div class="bg-green-50 text-green-600 font-medium text-sm px-3 py-1 rounded mb-6 inline-block">
           Alerta máxima: 30 km
         </div>
 
         <div class="mb-6">
-          <p class="text-sm text-gray-400 line-through">MXN $2,298</p>
-          <p class="text-3xl font-extrabold text-cooky-red">MXN $1,767</p>
-          <p class="text-xs text-gray-500">Precio de lanzamiento</p>
+          <p class="text-gray-400 text-sm line-through">MXN $2,298</p>
+          <p class="text-3xl font-extrabold text-gray-900">MXN $1,767</p>
+          <p class="text-gray-500 text-xs mt-1">Precio de lanzamiento</p>
         </div>
 
-        <ul class="space-y-3 mb-8 text-gray-700 flex-grow">
-          <li class="flex items-center"><svg class="w-5 h-5 text-cooky-green mr-2" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>15 días de publicidad intensa</li>
-          <li class="flex items-center"><svg class="w-5 h-5 text-cooky-green mr-2" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>120,500 - 212,500 personas alcanzadas</li>
-          <li class="flex items-center"><svg class="w-5 h-5 text-cooky-green mr-2" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>Seguimiento y monitoreo activo</li>
-          <li class="flex items-center"><svg class="w-5 h-5 text-cooky-green mr-2" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>Publicación en Wapin</li>
-          <li class="flex items-center"><svg class="w-5 h-5 text-cooky-green mr-2" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>Facebook & Instagram Stories</li>
-          <li class="flex items-center"><svg class="w-5 h-5 text-cooky-green mr-2" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>Video Alerta y Reels</li>
+        <ul class="mb-8 space-y-3 text-gray-700 flex-grow">
+          <li class="flex items-center gap-2"><span class="text-green-500">✔</span>15 días de publicidad intensa</li>
+          <li class="flex items-center gap-2"><span class="text-green-500">✔</span>120,500 - 212,500 personas alcanzadas</li>
+          <li class="flex items-center gap-2"><span class="text-green-500">✔</span>Seguimiento y monitoreo activo</li>
+          <li class="flex items-center gap-2"><span class="text-green-500">✔</span>Publicación en Wapin</li>
+          <li class="flex items-center gap-2"><span class="text-green-500">✔</span>Facebook & Instagram Stories</li>
+          <li class="flex items-center gap-2"><span class="text-green-500">✔</span>Video Alerta y Reels</li>
         </ul>
 
-        <button class="w-full bg-green-700 text-white font-semibold py-3 rounded-lg hover:bg-green-700 transition">
+        <button class="w-full bg-green-600 text-white font-semibold py-3 rounded-lg hover:bg-green-700 transition">
           Activar alerta
         </button>
       </div>
@@ -333,11 +339,12 @@ const reportes = [
     <div class="text-center mt-12">
       <div class="inline-flex items-center bg-green-50 text-green-700 px-6 py-3 rounded-full font-medium text-sm shadow-sm">
         <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M12 11c0 .341-.034.675-.098.994m0 0A4.992 4.992 0 007 16h10a4.992 4.992 0 00-4.902-4.006z"/><path stroke-linecap="round" stroke-linejoin="round" d="M12 7a4 4 0 110 8 4 4 0 010-8z"/><path stroke-linecap="round" stroke-linejoin="round" d="M12 7V5m0 14v-2m7-7h2M3 12h2"/></svg>
-       Garantía de Disponibilidad, Plataforma activa las 24 horas, lista para ayudarte en cualquier momento.
+        Garantía de Disponibilidad, Plataforma activa las 24 horas, lista para ayudarte en cualquier momento.
       </div>
     </div>
   </div>
 </section>
+
 
   
       <script>
